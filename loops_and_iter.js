@@ -131,7 +131,7 @@ let gpa = {
 let highGpa = {};
 Object.keys(gpa).forEach((cand) => {
     if (gpa[cand] < 8.5) {
-        return;
+        return; // Can't use break or continue since it's inside a function
     }
     highGpa[cand] = gpa[cand];
 })
