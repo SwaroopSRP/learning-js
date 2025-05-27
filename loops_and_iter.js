@@ -49,7 +49,6 @@ console.log();
 // Array Iterations (can't skip, terminate or return in between), Few:
 
 // Array.forEach()
-
 /*
 array.forEach(function(currentValue, index, array) {
   // Your code here
@@ -74,7 +73,6 @@ x.forEach((val, idx) => {
 
 
 // Array.map()
-
 /*
 array.map((element, index, array) => {
   // return transformed element
@@ -90,7 +88,6 @@ x.map((val) => {
 console.log();
 
 // Array.filter()
-
 /*
 array.filter((element, index, array) => {
   return condition; // true to keep, false to skip
@@ -101,7 +98,6 @@ let even = x.filter(x => x % 2 === 0);
 console.log(even);
 
 // Array.reduce()
-
 /*
 array.reduce((accumulator, currentValue, index, array) => {
   // logic here
@@ -120,3 +116,23 @@ console.log(count);
 
 const max = [10, 5, 8, 20].reduce((acc, val) => val > acc ? val : acc);
 console.log(max); // 20
+
+
+// Problems
+
+// Use forEach to transfer pairs to new object iff the candidate has GPA > 8.4
+let gpa = {
+    'Swaroop': 8.98,
+    'Ruchika': 9.03,
+    'Varun': 8.55,
+    'Srinidhi': 8.45,
+    'Akshat': 8.3
+};
+let highGpa = {};
+Object.keys(gpa).forEach((cand) => {
+    if (gpa[cand] < 8.5) {
+        return;
+    }
+    highGpa[cand] = gpa[cand];
+})
+console.log(highGpa);
