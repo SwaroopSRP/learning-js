@@ -109,7 +109,7 @@ array.reduce((accumulator, currentValue, index, array) => {
  */
 
 let evenSum = x.reduce((acc, elem) => acc + elem);
-console.log(even);
+console.log(evenSum);
 
 const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 const count = fruits.reduce((acc, fruit) => {
