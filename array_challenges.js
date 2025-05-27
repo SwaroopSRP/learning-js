@@ -1,90 +1,122 @@
-/*
-1. Declare an array named `teaFlavors` that contains the strings `"green tea"`, `"black tea"`, and `"oolong tea"`.
-   Access the first element of the array and store it in a variable named `firstTea`.
-*/
+// Traditional Loops (5 types)
 
-let teaFlavors = ["green tea", "black tea", "oolong tea"];
+// While Loop
+let x = 1;
+while(x <= 10) {
+    process.stdout.write(x + " ");
+    x++;
+}
 
-const firstTea = teaFlavors[0];
+console.log();
 
-/*
-2. Declare an array named `cities` containing `"London"`, `"Tokyo"`, `"Paris"`, and `"New York"`.
-   Access the third element in the array and store it in a variable named `favoriteCity`.
-*/
+// Do...While Loop
+x = 1;
+do {
+    process.stdout.write(x + " ");
+    x++;
+} while(x <= 10);
 
-let cities = ["London", "Tokyo", "Paris", "New York"];
-const favoriteCity = cities[2];
+console.log();
 
-/*
-3. You have an array named `teaTypes` containing `"herbal tea"`, `"white tea"`, and `"masala chai"`.
-   Change the second element of the array to `"jasmine tea"`.
-*/
-let teaTypes = ["herbel tea", "white tea", "masala chai"];
+// For Loop
+for (let i = 1; i <= 10; i++) {
+    process.stdout.write(i + " ");
+}
 
-/*
-4. Declare an array named `citiesVisited` containing `"Mumbai"` and `"Sydney"`.
-   Add `"Berlin"` to the array using the `push` method.
-*/
+console.log();
 
-let citiesVisited = ["Mumbai", "Sydney"];
-citiesVisited.push("Berlin");
-// console.log(citiesVisited);
+// For...in Loop
+x = { 'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10 };
+for (let i in x) {
+    console.log(`${i} --> ${x[i]}`);
+}
 
-/*
-5. You have an array named `teaOrders` with `"chai"`, `"iced tea"`, `"matcha"`, and `"earl grey"`.
-   Remove the last element of the array using the `pop` method and store it in a variable named `lastOrder`.
-*/
+x = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+for (let i in x) {
+    process.stdout.write(x[i] + " ");
+}
 
-let teaOrders = ["chai", "iced tea", "matcha", "earl grey"];
-const lastOrder = teaOrders.pop();
+console.log();
 
-/*
-6. You have an array named `popularTeas` containing `"green tea"`, `"oolong tea"`, and `"chai"`.
-   Create a soft copy of this array named `softCopyTeas`.
-*/
+// For...of Loop
+for (let i of x) {
+    process.stdout.write(i + " ");
+}
 
-let popularTeas = ["green tea", "oolong tea", "chai"];
-let softCopyTeas = popularTeas;
-popularTeas.pop();
-// console.log(softCopyTeas);
-// console.log(popularTeas);
+console.log();
 
-/*
-7. You have an array named `topCities` containing `"Berlin"`, `"Singapore"`, and `"New York"`.
-   Create a hard copy of this array named `hardCopyCities`.
-*/
 
-let topCities = ["Berlin", "Singapore", "New York"];
-let hardCopyCities = [...topCities];
-// let hardCopyCities = topCities.slice();
-topCities.pop();
-// console.log(hardCopyCities);
+// Array Iterations (can't skip, terminate or return in between), Few:
+
+// Array.forEach()
 
 /*
-8. You have two arrays: `europeanCities` containing `"Paris"` and `"Rome"`, and `asianCities` containing `"Tokyo"` and `"Bangkok"`.
-   Merge these two arrays into a new array named `worldCities`.
+array.forEach(function(currentValue, index, array) {
+  // Your code here
+}, thisArg);
+
+Parameters:
+    currentValue – the current element being processed.
+    index (optional) – the index of the current element.
+    array (optional) – the array forEach() was called upon.
+    thisArg (optional) – value to use as this when executing the callback.
 */
 
-let europeanCities = ["Paris", "Rome"];
-let asianCities = ["Tokyo", "Bangkok"];
-let worldCities = europeanCities.concat(asianCities);
+x.forEach(val => {
+    process.stdout.write(val + " ");
+});
 
-console.log(worldCities);
+console.log();
+
+x.forEach((val, idx) => {
+    console.log(`At ${idx} --> ${val}`);
+})
+
+
+// Array.map()
 
 /*
-9. You have an array named `teaMenu` containing `"masala chai"`, `"oolong tea"`, `"green tea"`, and `"earl grey"`.
-   Find the length of the array and store it in a variable named `menuLength`.
-*/
+array.map((element, index, array) => {
+  // return transformed element
+});
+ */
 
-let teaMenu = ["Masala chai", "oolong tea", "green tea", "earl grey"];
+x = x.map(i => i / 10);
 
-let menuLength = teaMenu.length;
+x.map((val) => {
+    process.stdout.write(val + " ");
+});
+
+console.log();
+
+// Array.filter()
 
 /*
-10. You have an array named `cityBucketList` containing `"Kyoto"`, `"London"`, `"Cape Town"`, and `"Vancouver"`.
-    Check if `"London"` is in the array and store the result in a variable named `isLondonInList`.
-*/
+array.filter((element, index, array) => {
+  return condition; // true to keep, false to skip
+});
+ */
 
-let cityBucketList = ["Kyoto", "London", "Cape Town", "Vancouver"];
+let even = x.filter(x => x % 2 === 0);
+console.log(even);
 
-let isLondonInList = cityBucketList.includes("London");
+// Array.reduce()
+
+/*
+array.reduce((accumulator, currentValue, index, array) => {
+  // logic here
+}, initialValue);
+ */
+
+let evenSum = x.reduce((acc, elem) => acc + elem);
+console.log(even);
+
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+const count = fruits.reduce((acc, fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1;
+    return acc;
+}, {});
+console.log(count);
+
+const max = [10, 5, 8, 20].reduce((acc, val) => val > acc ? val : acc);
+console.log(max); // 20
