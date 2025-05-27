@@ -1,0 +1,13 @@
+{
+  "name": "learning-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loops_and_iterations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "SRP",
+  "license": "ISC",
+  "type": "commonjs"
+}
