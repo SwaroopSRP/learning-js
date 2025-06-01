@@ -1,3 +1,69 @@
+// Prototypes
+function Gadget(brand){this.brand=brand;}
+const g=new Gadget("TechCorp");
+const proto={info:function(){return"Brand: "+this.brand;}};
+g.__proto__=proto;
+console.log(g.info());
+Object.setPrototypeOf(g,{info:function(){return"Gadget by "+this.brand;}});
+console.log(g.info());
+console.log(Object.getPrototypeOf(g));
+
+function describe(feature,year){return this.brand+" with "+feature+" released in "+year;}
+const anotherGadget={brand:"NeoTech"};
+
+/*
+call:   func.call(thisArg, arg1, arg2, ...) — calls the function with specified `this` and arguments
+apply:  func.apply(thisArg, [arg1, arg2, ...]) — like call but takes arguments as an array
+bind:   func.bind(thisArg, arg1, arg2, ...) — returns a new function with `this` and arguments bound, doesn't invoke immediately
+*/
+
+// Using call: invokes the function immediately, passing arguments one by one
+console.log(describe.call(anotherGadget,"AI Assistant",2025));
+
+// Using apply: invokes the function immediately, passing arguments as an array
+console.log(describe.apply(anotherGadget,["Quantum Sensor",2030]));
+
+// Using bind: returns a new function with `this` bound to the given object
+const boundDescribe=describe.bind(anotherGadget,"Holographic Display",2040);
+console.log(boundDescribe());
+
+
+// Functional Constructors
+
+/*
+Functional constructors in JavaScript are regular functions used to create and initialize objects.
+When used with the `new` keyword, they:
+- Create a new object.
+- Set the prototype of the new object to the constructor's `.prototype`.
+- Bind `this` inside the function to the new object.
+- Return the new object implicitly (unless an object is returned manually).
+
+Prototype methods are defined on the constructor's prototype so all instances share the method (memory efficient).
+
+Private fields in functional constructors can be created using closures (variables inside the constructor that aren’t attached to `this`).
+or by # (for both vars and methods since ES2022)
+*/
+
+function Vehicle(type){
+    let secretCode="V"+Math.floor(Math.random()*1000); // private field using closure
+    this.type=type;
+    this.getSecret=function(){return secretCode;} // privileged method to access private field
+}
+Vehicle.prototype.describe=function(){
+    return"This is a "+this.type;
+};
+
+const v=new Vehicle("Electric Scooter");
+console.log(v.describe());
+console.log(v.getSecret());
+console.log(Object.getPrototypeOf(v)===Vehicle.prototype);
+
+class SecretBox{#code="XYZ123";reveal(){return this.#code;}}
+console.log(new SecretBox().reveal());
+
+
+// Course Problems
+
 /*
 Prototype Chaining:
 
@@ -19,7 +85,7 @@ Dog.prototype.bark = function() {
 };
 Dog.prototype.constructor = Dog;
 
-// Usage:
+// Usage
 let a1 = new Animal();
 console.log(a1.speak());
 console.log((new Dog()).bark());
