@@ -19,7 +19,7 @@ Dog.prototype.bark = function() {
 };
 Dog.prototype.constructor = Dog;
 
-// Usage
+// Usage:
 let a1 = new Animal();
 console.log(a1.speak());
 console.log((new Dog()).bark());
