@@ -7,3 +7,4 @@ For further learning, I will be moving them in separate repos.
 
 ## VanillaJS-based Projects
 - [Min ToDo - A simplistic ToDo List manager](https://github.com/SwaroopSRP/min-todo) (Frontend)
+- [API-Weather-Info - Simple way to find out weather based on OWM](https://github.com/Swaroop/learning-web-dev/api-weather-info) (Frontend + API-Handling)
