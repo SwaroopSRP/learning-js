@@ -7,5 +7,5 @@ For further learning, I will be moving them in separate repos.
 
 ## VanillaJS-based Frontend Projects (incl. Mini)
 - [Min ToDo - A simplistic ToDo List manager](https://github.com/SwaroopSRP/min-todo) (Frontend)
-- [API-Weather-Info - Simple way to find out weather based on OWM](https://github.com/SwaroopSRP/learning-web-dev/api-weather-info) (Frontend + API-Handling)
-- [Quiz-App - Simple quiz web-app that takes in name and confirmation, allows MCQ selection and shows result](https://github.com/SwaroopSRP/learning-web-dev/quiz-app) (Frontend)
+- [API-Weather-Info - Simple way to find out weather based on OWM](https://github.com/SwaroopSRP/learning-web-dev/tree/main/api-weather-info) (Frontend + API-Handling)
+- [Quiz-App - Simple quiz web-app that takes in name and confirmation, allows MCQ selection and shows result](https://github.com/SwaroopSRP/learning-web-dev/tree/main/quiz-app) (Frontend)
