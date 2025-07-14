@@ -1,0 +1,28 @@
+{
+  "name": "proj1",
+  "version": "1.0.0",
+  "description": "Mega Backend Project Express Learning",
+  "keywords": [
+    "node",
+    "express",
+    "js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "learning-js"
+  },
+  "license": "ISC",
+  "author": "SRP",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./index.js",
+    ".": "node ./index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
