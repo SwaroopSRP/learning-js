@@ -12,7 +12,7 @@ For further learning, I will be moving them in separate repos.
 
 ## NodeJS + Express Backend Projects
 - [Zenithic - Project Management Tool](https://github.com/SwaroopSRP/zenithic-core) (Ongoing)
-- [Krushi Sakha - Kerala Farmers' Assistant](https://github.com/Swaroop/krushi-sakha-backend) (Partial, needs refinement)
+- [Krushi Sakha - Kerala Farmers' Assistant](https://github.com/SwaroopSRP/krushi-sakha-backend) (Partial, needs refinement)
 
 ## Frontend With React
-- [Sasta React - React-like bare-bones code, ultra-simplistic](https://github.com/learning-js/concepts/frontend/sasta-react/index.html) (Page rendered dynamically from JS)
+- [Sasta React - React-like bare-bones code, ultra-simplistic](https://swaroopsrp.github.io/learning-js/concepts/frontend/sasta-react/index.html) (Page rendered dynamically from JS)
